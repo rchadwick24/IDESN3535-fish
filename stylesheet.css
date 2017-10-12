@@ -1,5 +1,3 @@
-
-
 h1
 	{
 		box-sizing: border-box;
@@ -11,17 +9,17 @@ h1
   padding: 100px;
   background: #F0E3C3;
   font-family: 'Playfair Display SC', serif;
-  text-align: center;
+  text-align: left;
   color: #000
 }
 
 ol
 	{
-		text-align: center;
+		text-align: left;
 		
 	}
 li	{
-		text-align: center;
+		text-align: left;
 }
 img {
 	float: center;

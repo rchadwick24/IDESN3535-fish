@@ -3,9 +3,58 @@
 
 <head>
 <title> Javascript! </title>
+<style>
+</style>
+<script>
+let javascriptInfo = "Javascript does have a purpose!";
+console.log(javascriptInfo + " :)");
+console.log(45);
+console.log(true);
+console.log(undefined);
+
+if (javascriptInfo === 5) {
+	console.log('yay!');
+} else {
+	console.log('boo :(');
+}
+// returns the factorial of the input
+function factorial(input) {
+	// alert("button click!");
+	
+	const myInput = document.getElementById("my-input");
+	input = myInput.value;
+	// alert(input);
+
+// Definition of a factorial"
+	//3! = 3 * 2 * 1;
+
+	let returnValue = 1;
+	while (input > 0) {
+	returnValue = input * returnValue;
+	
+		// console.log(input);
+		input--;
+	}
+alert("the factorial of " + myInput.value + "! =" +returnValue);
+	return input;
+}
+
+
+</script>
 </head>
 
 <body>
+<h1>Javascript!</h1>
+
+<input type="text" id="my-input"_/>
+<button id="factorial-button">
+Calculate Factorial!
+</button>
+<script>
+const factorialButton = document. getElementById("factorial-button");
+factorialButton.addEventListener('click', factorial);
+</script>
+
 </body>
 
 </html>
