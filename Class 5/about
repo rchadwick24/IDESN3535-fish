@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Templates</title>
+
+<link href="../normalize.css" rel="stylesheet" />
+<link href="styles.css" rel="stylesheet" />
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script src="template_file.js"></script>
+
+<script src="templates.js.html"></script>
+
+<script>
+
+$(document).ready(function(){
+	$("body").prepend(getTemplate(headerTemplate, {class: 'about',title: 'About'}) );
+
+	$("body").append(getTemplate(footerTemplate, {class: 'footer'}) );
+
+
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+<p>Content</p>
+
+</body>
+
+</html>

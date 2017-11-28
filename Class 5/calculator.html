@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tip Calculator</title>
+<style>
+#wrapper {
+    border: 5px dotted yellow;
+    font-family:helvetica;
+    margin: auto;
+    width: 700px;
+    text-align: center;
+    color:yellow;
+    text-decoration:underline;
+    background:purple;
+}
+input {
+    margin: 10px 0 10px 0;
+}
+#tip_amount, #total {
+
+}
+</style>
+<script>
+function calculate () {
+var tipPercent = document.getElementById("percent").value;
+var billamnt = document.getElementById("bill").value;
+var tip = tipPercent/100 * billamnt;
+var total = +tip + +billamnt;
+tip = tip.toFixed(2);
+document.getElementById("tip_amount").innerHTML = tip;
+document.getElementById("total").innerHTML = total;
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<h1> *~*~*TIP CALCULATOR*~*~* </h1>
+<span>BILL AMOUNT</span>
+<br><input type="text" id="bill"></input>
+<br><span>TIP PERCENTAGE</span>
+<br><input type="text" id="percent" onkeyup="calculate()"></input>
+<p>TIP:
+<span id="tip_amount"></span>
+</p>
+<p>TOTAL:
+<span id="total"></span>
+</p>
+<div id="total"></div>
+</div>
+</body>
+</html>

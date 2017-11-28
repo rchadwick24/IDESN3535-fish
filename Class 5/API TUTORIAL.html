@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+h2 {
+	color: blue;
+	font-style:italic;
+	background:tan;
+}
+
+#class-schedule {
+	color:white;
+	background:grey;
+	font:helvetica;
+}
+
+
+</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<script>
+	$ (document).ready(function() {
+		// Do stuff here 
+	$.ajax({
+		url: "http://www.bvandorn.com/idesn-3535/schedule.json",
+		data: {},
+		success: function(response) {
+			for (let i = 0; i < response.classes.length; i++){
+		const currentClass = response.classes[i];
+
+		// const classRow = response.classes[i];
+		// Create a <tr> element via javascript for our class row.
+	
+		const classRow = document.createElement('tr');
+		//Setup the Class # and Date for our first column.
+		const dateCol = document.createElement('td');
+		dateCol.innerHTML = "Class " + i + "<br />" + currentClass.date;
+		classRow.append(dateCol);
+
+		$("#class-schedule").append(classRow); 
+		// setup the agenda column
+		const agendaCol = document.createElement ('td');
+		// our agenda is an unordered list so we can creare a <ul>
+		const agendaList = document.createElement ('ul');
+		// We can use forEach as another way to loop through an array
+		currentClass.agenda.forEach(function(agendaItem){
+		// Create list items, set the text as our agendaItem
+		const agendaListItem = document.createElement('li');
+		// Append our <li> to our <ul>
+		agendaListItem.innerText = agendaItem;
+
+		agendaList.append(agendaListItem);
+		});
+		// append out <ul> into our column.
+		agendaCol.append(agendaList);
+		// add the new column to the class row.
+		classRow.append(agendaCol);
+
+	}
+			// This function gets called when we get our file!
+			console.log(response);
+		}
+	})
+	
+
+	});
+	</script>
+</head>
+
+<body>
+<h2>Syllabus</h2>
+<a href="http://bit.ly/2gEbCrd" target="_blank">Syllabus</a>
+
+<h2>Course Schedule</h2>
+<table id="class-schedule" border="1">
+
+</table>
+
+</body>
+
+</html>
