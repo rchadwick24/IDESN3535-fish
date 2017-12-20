@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Final Project Title Here</title>
+
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIZI1b1qmBw5WwDs97FYryU3KpmEiy030&callback=initMap"
+  type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <script src="utiles.js"></script>
+        <script src="finaltemplate.js.html"></script>
+        <link href="normalize.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+
+        <script>
+        
+        $(document).ready(function(){
+
+            $.ajax({
+            url: "http://www.bvandorn.com/idesn-3535/apis/fish.json",
+            success: function(response){
+            console.log(response);
+            api = response;
+
+                for (let i = 0; i < response.breweries.length; i++){
+                const currentBrewery = response.breweries[i];
+
+                // const classRow = document.createElement('tr');
+
+                // const dateCol = document.createElement('td');
+                // dateCol.innerHTML = "Class " + i + "<br />" + currentClass.date;
+                // classRow.append(dateCol);
+
+                // const agendaCol = document.createElement('td');
+
+                // const agendaList = document.createElement('ul');
+
+                // currentClass.agenda.forEach(function(agendaItem){
+
+                //     const agendaListItem = document.createElement('li');
+                //     agendaListItem.innerText = agendaItem;
+
+                //     agendaList.append(agendaListItem);
+                // });
+
+                const brewRow = document.createElement ('tr');
+
+                const brewery = document.createElement('td');
+                brewery.innerHTML = currentBrewery.name;
+                brewRow.append(brewery);
+
+                $("#breweries").append(brewRow);
+
+                const location = document.createElement('td');
+                location.innerHTML = currentBrewery.city + "," + currentBrewery.state;
+                brewRow.append(location); 
+
+            }
+
+
+
+
+
+                $("body").prepend(getTemplate(headerTemplate, {class: 'page', title: 'Breweries'}) );
+
+
+
+
+
+
+                // $("body").append(getTemplate(footerTemplate, {class: 'footer', title: 'beer'}) );
+
+
+
+
+        
+    }
+        
+
+        });
+
+    
+    });
+
+        </script>
+</head>
+
+<body>
+
+<div class="content">
+<iframe src="https://snazzymaps.com/embed/35226" width="50%" height="300px" style="border:none;"></iframe>
+
+<table id="breweries" border ="1">
+
+</table>
+
+</div>
+
+<!-- <div class="brews">
+    
+    <h3 id="name"></h3>
+</div> -->
+
+</body>
+
+</html>

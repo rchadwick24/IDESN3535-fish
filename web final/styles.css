@@ -1,0 +1,121 @@
+body {
+	/*color: red;*/
+	font-family: "Helvetica", sans-serif;
+    text-align: center;
+    background-color:#986060
+}
+
+a:link, a:visited {
+    color: white; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+
+header {
+	/*background-color: #986060;*/
+	/*height: 250px;*/
+    background-image: url('beer4.jpg');
+    background-repeat: no-repeat;
+	padding: 20px 20px 20px 20px;
+    overflow: hidden;
+    background-size:cover;
+}
+
+.page li{
+    display: inline-block;
+    /*float: left;*/
+    /*padding-left: 20px;*/
+    padding: 20px 0 0 20px;
+    font-size: 20px;
+
+}
+
+
+.ingredients li{
+/*    display: inline-block;*/
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+}
+
+.page {
+    text-align: center;
+    height: auto;
+
+}
+
+.title {
+    font-size: 50px;
+}
+
+.icons img{
+    max-width: 100%;
+    height:auto;
+}
+
+.icons {
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    height: 250px;
+    /*background-color: grey;*/
+}
+
+.footer {
+    background: black;
+    color: white;
+/*    position:absolute;
+    bottom: 0;*/
+    width: 100%;
+    margin-bottom:0;
+    height: 50px;
+}
+
+#breweries {
+    margin: auto;
+    border-collapse: collapse
+    /*margin-bottom: 30px;*/
+
+}
+
+#breweries td {
+    background-color: #ECCFC3;
+
+
+}
+
+#breweries td {
+    padding: 15px;
+}
+
+.content iframe {
+    margin: 0 0 30px 0;
+}
+
+.content {
+        margin-bottom: 30px;
+}
+
+.provides, #Ales, #Lagers {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#Ales td, #Ales th, #Lagers td, #Lagers th{
+    background-color: #ECCFC3
+}
+
+td, th {
+    padding: 10px;
+
+}
+
+h4 {
+    margin-top: 80px;
+}
+
+p {
+    font-size: .7em;
+}

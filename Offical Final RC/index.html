@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Final Project Title Here</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <script src="utiles.js"></script>
+        <script src="finaltemplate.js.html"></script>
+        <link href="normalize.css" rel="stylesheet" />
+        <link href="styles.css" rel="stylesheet" />
+
+        <script>
+        
+        $(document).ready(function(){
+
+            $.ajax({
+            url: "http://www.bvandorn.com/idesn-3535/apis/fish.json",
+            success: function(response){
+            console.log(response);
+            api = response;
+
+
+                $("body").prepend(getTemplate(headerTemplate, {class: 'page', title: 'Beer'}) );
+
+                $('#glass').hide();
+
+                // $("body").append(getTemplate(footerTemplate, {class: 'footer', title: 'beer'}) );
+
+
+
+
+        
+        }
+        
+
+        });
+
+    
+    });
+
+        </script>
+</head>
+
+<body>
+
+<div class="info">
+
+ <!--    <h2>Ingredients</h2>
+
+    <ul class="ingredients">
+        <li> water</li>
+        <li> grains</li>
+        <li> hops</li>
+        <li> yeast</li>
+
+    </ul> -->
+
+
+<!--     <table class="provides">
+
+    <tr>
+        <th>grains provide</th>
+        <th>hops provide</th>
+    </tr>
+
+    <tr>
+        <td>color</td>
+        <td>bitterness</td>
+    </tr>
+
+    <tr>
+        <td>flavor</td>
+        <td>flavor</td>
+    </tr>
+
+    <tr>
+        <td>maltose</td>
+        <td>aroma</td>
+    </tr>
+
+    <tr>
+        <td>proteins</td>
+        <td>stability</td>
+    </tr>
+
+    <tr>
+        <td>dextrins</td>
+    </tr>
+
+
+    </table> -->
+
+
+
+    <h2>Ales</h2>
+         <p>**Sweet and full-bodied and vary in color depending on grains used. Many contain hops which causes that bitter taste counteracting the sweet**</p>
+    
+    <table id="Ales" border="1">
+    <tr>
+        <th>Pale Ale</th>
+        <td>Malty and hoppy with fruity aromas</td>
+    </tr>
+
+      <tr>
+        <th>IPA</th>
+        <td>Extremely bitter, amber colo</td>
+    </tr>
+
+    <tr>
+        <th>Irish Ale</th>
+        <td>Malty and sweet flavors, deep red color</td>
+    </tr>
+
+    <tr>
+        <th>Amber</th>
+        <td>Sweet from excess malt, amber color</td>
+    </tr>
+
+    <tr>
+        <th>Porter</th>
+        <td>Darkand heavy, burnt flavor</td>
+    </tr>
+
+    <tr>
+        <th>Stout</th>
+        <td>Roasted not malted, sweet with caramel aromas</td>
+    </tr>
+
+
+    </table>
+
+
+    <h2>Lagers</h2>
+        <p>**Due to fermentation process, lagers have a crisper taste. The process is longer and at cooler temperatures which causes the beer to be mellow and smooth**</p>
+    
+    <table id="Lagers" border="1">
+    <tr>
+        <th>Pilsner</th>
+        <td>Straw color, highly carbonated, low alcohol content</td>
+    </tr>
+
+      <tr>
+        <th>Bock</th>
+        <td>Sweer and dark, wide arrange of flavors</td>
+    </tr>
+
+    <tr>
+        <th>Dunkel</th>
+        <td>Dark, amber, with smooth flavors similar to coffee</td>
+    </tr>
+
+
+    </table>
+    
+
+</div>
+
+
+</body>
+
+</html>

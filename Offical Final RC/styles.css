@@ -1,0 +1,135 @@
+body {
+	/*color: red;*/
+	font-family: "avenir", sans-serif;
+    text-align: center;
+/*     background-image: url('beer4.jpg');
+    background-repeat: no-repeat;*/
+}
+
+html { 
+  background: url('beer4.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a:link, a:visited {
+    color: white; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+
+header {
+	/*background-color: #986060;*/
+	/*height: 250px;*/
+/*    background-image: url('beer4.jpg');
+    background-repeat: no-repeat;*/
+	padding: 20px 20px 20px 20px;
+    overflow: hidden;
+}
+
+.info h2, .info p{
+    color: white;
+}
+
+.info {
+    padding: 0 50px 0 50px;
+}
+
+.page li{
+    display: inline-block;
+    /*float: left;*/
+    /*padding-left: 20px;*/
+    padding: 20px 0 0 20px;
+    font-size: 20px;
+
+}
+
+
+
+.ingredients li{
+/*    display: inline-block;*/
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+}
+
+.page {
+    text-align: center;
+    height: auto;
+
+}
+
+.title {
+    font-size: 90px;
+    color: white;
+    margin-top: 40px;
+}
+
+#wow {
+    max-width: 50%;
+    height:auto;
+}
+
+#glass {
+    max-width: 10%;
+    height:auto;
+    margin-bottom: 40px;
+}
+
+
+
+.icons {
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    /*height: 400px;*/
+    /*background-color: grey;*/
+}
+
+#breweries {
+    margin: auto;
+    border-collapse: collapse
+    /*margin-bottom: 30px;*/
+
+}
+
+
+#breweries td {
+    padding: 15px;
+        background-color: #ECCFC3;
+}
+
+.content iframe {
+    margin: 0 0 30px 0;
+}
+
+.content {
+        margin-bottom: 30px;
+}
+
+ #Ales, #Lagers {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#Ales td, #Ales th, #Lagers td, #Lagers th{
+    background-color: #ECCFC3
+}
+
+td, th {
+    padding: 10px;
+
+}
+
+
+h4 {
+    margin-top: 80px;
+}
+
+p {
+    font-size: .7em;
+}
